@@ -8,63 +8,93 @@
 </head>
 <body>
     <header>
-        <h1>Shaik Sajid Ali</h1>
-        <p>Contact Me</p>
+        <div class="banner">
+            <h1>Shaik Sajid Ali</h1>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> +1 9405956783</p>
+                <p><strong>Email:</strong> sksajidali1279@gmail.com</p>
+                <p><strong>Address:</strong> 9801 Valley Ranch Pkwy W, Irving, TX</p>
+            </div>
+        </div>
     </header>
-
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p><strong>Phone:</strong> +1 9405956783</p>
-        <p><strong>Email:</strong> sksajidali1279@gmail.com</p>
-        <p><strong>Address:</strong> 9801 Valley Ranch Pkwy W, Irving, TX</p>
-    </section>
 
     <section id="about">
         <h2>About Me</h2>
         <p>I aim to attain an engaging workspace to showcase my skills in the best possible way to benefit my workspace and myself in order to secure a better possession of my skills as a designer. I have immense passion towards UI and UX designing.</p>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>Board of Intermediate Education:</strong> Master’s, 2014-2016 (81.4%)</p>
-        <p><strong>Srichaitanya Institute of Science and Technology:</strong> B.E. in Computer Science, 2017-2021 (8.31 CGPA)</p>
-        <p><strong>University of North Texas:</strong> Master's, 2022-Present</p>
-    </section>
+    <section id="tabs">
+        <input type="radio" id="tab-education" name="tab" checked>
+        <label for="tab-education">Education</label>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <p><strong>Accenture:</strong> Application Development Associate (SAPUI5 developer), 2021-2022</p>
-    </section>
+        <input type="radio" id="tab-experience" name="tab">
+        <label for="tab-experience">Experience</label>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>UI & UX Design</li>
-            <li>Adobe XD</li>
-            <li>Adobe Photoshop</li>
-            <li>Python</li>
-            <li>C/C++</li>
-            <li>Basic Java</li>
-            <li>DBMS</li>
-            <li>Internet of Things</li>
-            <li>AR/VR</li>
-        </ul>
-    </section>
+        <input type="radio" id="tab-skills" name="tab">
+        <label for="tab-skills">Skills</label>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p><strong>Personal DBMS:</strong> Developed a database management system for a footwear storage unit using Microsoft Access.</p>
-        <p><strong>Smart Crop Rotation:</strong> A machine learning-based Python project for future crop rotation based on past crop yield percentage and soil nutritional values.</p>
-        <p><strong>Speech Translation:</strong> Minor project to convert speech to text and translate it into various languages using Machine learning and Python.</p>
-    </section>
+        <input type="radio" id="tab-projects" name="tab">
+        <label for="tab-projects">Projects</label>
 
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <ul>
-            <li>SAP/UI5 Appathon 2022 winner conducted by LKM Techgenics.</li>
-            <li>Awarded Star-Rylarian male on Ryla event conducted by Rotary Club of Chennai.</li>
-            <li>Opportunity to design a roadmap for Sathyabama University CSE department requested by the Dean of Computer Science Department.</li>
-        </ul>
+        <input type="radio" id="tab-achievements" name="tab">
+        <label for="tab-achievements">Achievements</label>
+
+        <input type="radio" id="tab-certifications" name="tab">
+        <label for="tab-certifications">Certifications</label>
+
+        <!-- Content for each tab goes here -->
+        <div id="content-education" class="tab-content">
+            <h2>Education</h2>
+            <p><strong>Board of Secondary Education:</strong> 2014-2016 (88%) - Bhashyam Public School</p>
+            <p><strong>Board of Intermediate Education:</strong> 2014-2016 (81.4%) - Srichaitanya Institute of Science and Technology</p>
+            <p><strong>B.E. in Computer Science:</strong> 2017-2021 (8.31 CGPA) - Sathyabama University</p>
+            <p><strong>Master’s:</strong> 2022-Present - University of North Texas</p>
+        </div>
+
+        <div id="content-experience" class="tab-content">
+            <h2>Experience</h2>
+            <p><strong>Accenture:</strong> 2021-2022 - Application Development Associate (SAPUI5 developer)</p>
+        </div>
+
+        <div id="content-skills" class="tab-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>UI & UX</li>
+                <li>Adobe XD</li>
+                <li>Adobe Photoshop</li>
+                <li>Python</li>
+                <li>C/C++</li>
+                <li>Basic Java</li>
+                <li>DBMS</li>
+                <li>Internet of Things</li>
+                <li>AR/VR</li>
+            </ul>
+        </div>
+
+        <div id="content-projects" class="tab-content">
+            <h2>Projects</h2>
+            <p><strong>Personal DBMS:</strong> Developed a much-needed database management system for a footwear storage unit to regulate received and sent stock using Microsoft Access. Currently holds over 6 years of data.</p>
+            <p><strong>Smart Crop Rotation:</strong> A Machine learning-based Python project that uses government verified datasets of past crops yield percentage and soil nutritional values to determine the possible future rotation for crop to reduce soil contamination of overuse of chemicals.</p>
+            <p><strong>Speech Translation:</strong> Speech translation is a minor project that can not only convert speech to text but also translate it into various languages using Machine learning and Python.</p>
+        </div>
+
+        <div id="content-achievements" class="tab-content">
+            <h2>Achievements</h2>
+            <ul>
+                <li>SAP/UI5 Appathon 2022 winner conducted by LKM Techgenics.</li>
+                <li>Awarded Star-Rylarian male on Ryla event conducted by Rotary Club of Chennai.</li>
+                <li>Opportunity to design a Roadmap for Sathyabama University CSE department requested by the Dean of Computer Science Department.</li>
+            </ul>
+        </div>
+
+        <div id="content-certifications" class="tab-content">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Introduction to UI/UX by California University of Arts.</li>
+                <li>Augmented and Virtual reality workshop.</li>
+                <li>Certified by State rotary club of Chennai In Ryla event.</li>
+            </ul>
+        </div>
     </section>
 
     <footer>
