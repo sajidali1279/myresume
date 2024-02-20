@@ -7,7 +7,7 @@ body {
 }
 @media (max-width: 768px) {
     header {
-        background: url('path/to/your/image.jpg') center/cover no-repeat;
+        background: url('resumebg.png') center/cover no-repeat;
         color: #fff;
         text-align: center;
         padding: 50px;
