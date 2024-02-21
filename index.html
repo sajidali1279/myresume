@@ -23,6 +23,15 @@
         <p>I aim to attain an engaging workspace to showcase my skills in the best possible way to benefit my workspace and myself in order to secure a better possession of my skills as a designer. I have immense passion towards UI and UX designing.</p>
     </section>
 
+    <nav id="tabs">
+        <label for="tab-education">Education</label>
+        <label for="tab-experience">Experience</label>
+        <label for="tab-skills">Skills</label>
+        <label for="tab-projects">Projects</label>
+        <label for="tab-achievements">Achievements</label>
+        <label for="tab-certifications">Certifications</label>
+    </nav>
+
     <section id="education" class="hidden">
         <h2>Education</h2>
         <ul>
@@ -86,18 +95,18 @@
 
     <script>
         // JavaScript to handle tab switching
-        const tabs = document.querySelectorAll('input[name="tab"]');
+        const tabs = document.querySelectorAll('label');
         tabs.forEach(tab => {
-            tab.addEventListener('change', (event) => {
-                const selectedTab = event.target.id.replace('tab-', '');
-                showContent(selectedTab);
+            tab.addEventListener('click', () => {
+                const tabId = tab.htmlFor;
+                showContent(tabId.replace('tab-', ''));
             });
         });
 
         function showContent(tabName) {
             const sections = document.querySelectorAll('section');
             sections.forEach(section => {
-                if (section.id === tabName || section.id === 'about') {
+                if (section.id === tabName) {
                     section.classList.remove('hidden');
                 } else {
                     section.classList.add('hidden');
