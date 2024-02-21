@@ -106,7 +106,7 @@
         function showContent(tabName) {
             const sections = document.querySelectorAll('section');
             sections.forEach(section => {
-                if (section.id === tabName) {
+                if (section.id === tabName || section.id === 'about') {
                     section.classList.remove('hidden');
                 } else {
                     section.classList.add('hidden');
