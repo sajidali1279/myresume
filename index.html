@@ -18,12 +18,16 @@
         </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I aim to attain an engaging workspace to showcase my skills in the best possible way to benefit my workspace and myself in order to secure a better possession of my skills as a designer. I have immense passion towards UI and UX designing.</p>
-    </section>
-
     <nav id="tabs">
+        <input type="radio" id="tab-about" name="tab-control" checked>
+        <input type="radio" id="tab-education" name="tab-control">
+        <input type="radio" id="tab-experience" name="tab-control">
+        <input type="radio" id="tab-skills" name="tab-control">
+        <input type="radio" id="tab-projects" name="tab-control">
+        <input type="radio" id="tab-achievements" name="tab-control">
+        <input type="radio" id="tab-certifications" name="tab-control">
+
+        <label for="tab-about">About Me</label>
         <label for="tab-education">Education</label>
         <label for="tab-experience">Experience</label>
         <label for="tab-skills">Skills</label>
@@ -95,18 +99,18 @@
 
     <script>
         // JavaScript to handle tab switching
-        const tabs = document.querySelectorAll('label');
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const tabId = tab.htmlFor;
-                showContent(tabId.replace('tab-', ''));
+        const tabControls = document.querySelectorAll('input[name="tab-control"]');
+        tabControls.forEach(tabControl => {
+            tabControl.addEventListener('change', () => {
+                const tabName = tabControl.id.replace('tab-', '');
+                showContent(tabName);
             });
         });
 
         function showContent(tabName) {
             const sections = document.querySelectorAll('section');
             sections.forEach(section => {
-                if (section.id === tabName || section.id === 'about') {
+                if (section.id === tabName) {
                     section.classList.remove('hidden');
                 } else {
                     section.classList.add('hidden');
