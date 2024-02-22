@@ -3,120 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaik Sajid Ali - Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="banner">
-            <h1>Shaik Sajid Ali</h1>
-            <div class="contact-info">
-                <p><strong>Phone:</strong> +1 9405956783</p>
-                <p><strong>Email:</strong> sksajidali1279@gmail.com</p>
-                <p><strong>Address:</strong> 9801 Valley Ranch Pkwy W, Irving, TX</p>
-            </div>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav id="tabs">
-        <input type="radio" id="tab-about" name="tab-control" checked>
-        <input type="radio" id="tab-education" name="tab-control">
-        <input type="radio" id="tab-experience" name="tab-control">
-        <input type="radio" id="tab-skills" name="tab-control">
-        <input type="radio" id="tab-projects" name="tab-control">
-        <input type="radio" id="tab-achievements" name="tab-control">
-        <input type="radio" id="tab-certifications" name="tab-control">
-
-        <label for="tab-about">About Me</label>
-        <label for="tab-education">Education</label>
-        <label for="tab-experience">Experience</label>
-        <label for="tab-skills">Skills</label>
-        <label for="tab-projects">Projects</label>
-        <label for="tab-achievements">Achievements</label>
-        <label for="tab-certifications">Certifications</label>
-    </nav>
-
-    <section id="tab-education" class="hidden">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Board of Secondary Education:</strong> 2014-2016 (88%) - Bhashyam Public School</li>
-            <li><strong>Board of Intermediate Education:</strong> 2014-2016 (81.4%) - Srichaitanya Institute of Science and Technology</li>
-            <li><strong>B.E. in Computer Science:</strong> 2017-2021 (8.31 CGPA) - Sathyabama University</li>
-            <li><strong>Master’s:</strong> 2022-Present - University of North Texas</li>
-        </ul>
-    </section>
-
-    <section id="tab-experience" class="hidden">
-        <h2>Experience</h2>
-        <p><strong>Accenture:</strong> 2021-2022 - Application Development Associate (SAPUI5 developer)</p>
-    </section>
-
-    <section id="tab-skills" class="hidden">
-        <h2>Skills</h2>
-        <ul>
-            <li>UI & UX</li>
-            <li>Adobe XD</li>
-            <li>Adobe Photoshop</li>
-            <li>Python</li>
-            <li>C/C++</li>
-            <li>Basic Java</li>
-            <li>DBMS</li>
-            <li>Internet of Things</li>
-            <li>AR/VR</li>
-        </ul>
-    </section>
-
-    <section id="tab-projects" class="hidden">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Personal DBMS:</strong> Developed a much-needed database management system for a footwear storage unit to regulate received and sent stock using Microsoft Access. Currently holds over 6 years of data.</li>
-            <li><strong>Smart Crop Rotation:</strong> A Machine learning-based Python project that uses government verified datasets of past crops yield percentage and soil nutritional values to determine the possible future rotation for crop to reduce soil contamination of overuse of chemicals.</li>
-            <li><strong>Speech Translation:</strong> Speech translation is a minor project that can not only convert speech to text but also translate it into various languages using Machine learning and Python.</li>
-        </ul>
-    </section>
-
-    <section id="tab-achievements" class="hidden">
-        <h2>Achievements</h2>
-        <ul>
-            <li>SAP/UI5 Appathon 2022 winner conducted by LKM Techgenics.</li>
-            <li>Awarded Star-Rylarian male on Ryla event conducted by Rotary Club of Chennai.</li>
-            <li>Opportunity to design a Roadmap for Sathyabama University CSE department requested by the Dean of Computer Science Department.</li>
-        </ul>
-    </section>
-
-    <section id="tab-certifications" class="hidden">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Introduction to UI/UX by California University of Arts.</li>
-            <li>Augmented and Virtual reality workshop.</li>
-            <li>Certified by State rotary club of Chennai In Ryla event.</li>
-        </ul>
-    </section>
-
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Insert your information here.</p>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="gallery">
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2024 Shaik Sajid Ali</p>
+        <p>© 2024 My Website</p>
     </footer>
-
-    <script>
-        // JavaScript to handle tab switching
-        const tabControls = document.querySelectorAll('input[name="tab-control"]');
-        tabControls.forEach(tabControl => {
-            tabControl.addEventListener('change', () => {
-                const tabName = tabControl.id.replace('tab-', '');
-                showContent(tabName);
-            });
-        });
-
-        function showContent(tabName) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                if (section.id === tabName) {
-                    section.classList.remove('hidden');
-                } else {
-                    section.classList.add('hidden');
-                }
-            });
-        }
-    </script>
 </body>
 </html>
